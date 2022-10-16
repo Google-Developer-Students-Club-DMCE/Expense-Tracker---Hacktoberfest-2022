@@ -23,7 +23,15 @@ const NewTransactions = ({ setTransactions }) => {
   const [text, setText] = useState('')
   const [amount, setAmount] = useState()
 
-  const addTransaction = () => {
+  const addExpenseTransaction = () => {
+    const transaction = {
+      id: Math.floor(Math.random() * 100000),
+      text: text,
+      amount: -amount,
+    }
+    setTransactions((prevState) => [transaction, ...prevState])
+  }
+  const addIncomeTransaction = () => {
     const transaction = {
       id: Math.floor(Math.random() * 100000),
       text: text,
@@ -48,14 +56,14 @@ const NewTransactions = ({ setTransactions }) => {
         <Button
           style={{ width: '200px' }}
           variant="contained"
-          onClick={() => addTransaction()}
+          onClick={() => addExpenseTransaction()}
         >
           Expense
         </Button>
         <Button
           style={{ width: '200px' }}
           variant="contained"
-          onClick={() => addTransaction()}
+          onClick={() => addIncomeTransaction()}
         >
           Income
         </Button>
