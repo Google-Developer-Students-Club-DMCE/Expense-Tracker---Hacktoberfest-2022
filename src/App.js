@@ -3,7 +3,7 @@ import Balance from './components/Balance'
 import ExpenseCard from './components/ExpenseCard'
 import NewTransactions from './components/NewTransactions'
 import Transactions from './components/Transactions'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Typography, styled, Box } from '@mui/material'
 
 const Header = styled(Typography)`
@@ -33,16 +33,23 @@ function App() {
     { id: 3, text: 'Booze', amount: -3000 },
     { id: 4, text: 'Bonus', amount: 6000 },
   ])
-
+  const mapamount = transactions.map((transaction) => transaction.amount)
+  const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
+  const [mainbalance,setMainbalance]=useState(totalbalance)
+  useEffect(()=>{
+    const mapamount = transactions.map((transaction) => transaction.amount)
+    const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
+    setMainbalance(totalbalance)
+  },[transactions])
   return (
     <Box className="App">
       <Header>Expense Tracker</Header>
 
       <Component>
         <Box>
-          <Balance transactions={transactions} />
+          <Balance  mainbalance={mainbalance}/>
           <ExpenseCard transactions={transactions} />
-          <NewTransactions setTransactions={setTransactions} />
+          <NewTransactions setTransactions={setTransactions} mainbalance={mainbalance}/>
         </Box>
         <Box>
           <Transactions transactions={transactions} />

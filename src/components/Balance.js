@@ -6,13 +6,11 @@ const BalanceText = styled(Typography)`
   margin-bottom: 25px;
 `
 
-const Balance = ({ transactions }) => {
-  const amount = transactions.map((transaction) => transaction.amount)
-  const total = amount.reduce((acc, item) => (acc += item), 0)
+const Balance = ({ mainbalance }) => {
 
   return (
     <Box>
-      <BalanceText> Balance = ₹ {total}</BalanceText>
+      <BalanceText> Balance = ₹ {mainbalance}</BalanceText>
     </Box>
   )
 }
