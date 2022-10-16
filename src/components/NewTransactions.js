@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { Box, Typography, TextField, Button, styled } from '@mui/material'
+import { Box, Typography, TextField, Button, styled,Alert } from '@mui/material'
 
 const Container = styled(Box)`
   display: flex;
@@ -18,18 +18,35 @@ const Add = styled(Box)`
   flex-wrap: wrap;
   justify-content: space-evenly;
 `
+const AlertContainer = styled(Box)`
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:20;
 
-const NewTransactions = ({ setTransactions }) => {
+`
+
+const NewTransactions = ({ setTransactions,mainbalance }) => {
   const [text, setText] = useState('')
   const [amount, setAmount] = useState()
+  const [alert,setAlert]=useState(false)
 
+  const stopAlert=()=>{
+    setAlert(false)
+  }
   const addExpenseTransaction = () => {
-    const transaction = {
-      id: Math.floor(Math.random() * 100000),
-      text: text,
-      amount: -amount,
+    let mainbalancecopy=mainbalance;
+    if(mainbalancecopy-amount<0){
+      setAlert(true);
+      const closeAlert = setTimeout(stopAlert, 3000);
+    }else{
+      const transaction = {
+        id: Math.floor(Math.random() * 100000),
+        text: text,
+        amount: -amount,
+      }
+      setTransactions((prevState) => [transaction, ...prevState])
     }
-    setTransactions((prevState) => [transaction, ...prevState])
   }
   const addIncomeTransaction = () => {
     const transaction = {
@@ -41,6 +58,7 @@ const NewTransactions = ({ setTransactions }) => {
   }
   return (
     <Container>
+      {alert ? <AlertContainer><Alert severity='error'>"Not enough Balance."</Alert></AlertContainer> : <></> }
       <Typography variant="h4"> New Transaction </Typography>
       <TextField
         variant="filled"
