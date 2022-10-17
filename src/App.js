@@ -22,6 +22,7 @@ const Component = styled(Box)`
   margin: auto;
   & > div {
     height: 70vh;
+    overflow: auto;
     width: 60%;
     padding: 15px;
   }
