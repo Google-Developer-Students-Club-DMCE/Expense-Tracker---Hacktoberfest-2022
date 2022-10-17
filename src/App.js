@@ -30,10 +30,10 @@ const Component = styled(Box)`
 
 function App() {
   const [transactions, setTransactions] = useState([
-    { id: 1, text: 'Momos', amount: -9 },
-    { id: 2, text: 'Salary', amount: 4500 },
-    { id: 3, text: 'Booze', amount: -3000 },
-    { id: 4, text: 'Bonus', amount: 6000 },
+      { id: 1, text: 'Momos', amount: -9 },
+      { id: 2, text: 'Salary', amount: 4500 },
+      { id: 3, text: 'Booze', amount: -3000 },
+      { id: 4, text: 'Bonus', amount: 6000 },
   ])
   const mapamount = transactions.map((transaction) => transaction.amount)
   const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
@@ -56,7 +56,7 @@ function App() {
           <NewTransactions setTransactions={setTransactions} mainbalance={mainbalance}/>
         </Box>
         <Box>
-          <Transactions transactions={transactions} />
+          <Transactions transactions={transactions} setTransactions={setTransactions} />
         </Box>
       </Component>
     </Box>
