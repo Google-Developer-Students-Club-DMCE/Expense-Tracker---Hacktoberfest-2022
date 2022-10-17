@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Box, Typography, TextField, Button, styled,Alert } from '@mui/material'
+import { storeItem,getStoredItem } from '../localStorage'
 
 const Container = styled(Box)`
   display: flex;
@@ -45,7 +46,16 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
         text: text,
         amount: -amount,
       }
-      setTransactions((prevState) => [transaction, ...prevState])
+
+      let history = JSON.parse(getStoredItem());
+      
+      if(history&&history.length>0){
+        history.push(transaction);
+      }
+
+      let historyUpdate=history?history:[transaction];
+      storeItem(historyUpdate);
+      setTransactions((prevState) => [transaction, ...prevState]);
     }
   }
   const addIncomeTransaction = () => {
@@ -54,6 +64,16 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
       text: text,
       amount: +amount,
     }
+
+    let history = JSON.parse(getStoredItem());
+      
+      if(history&&history.length>0){
+        history.push(transaction);
+      }
+
+      let historyUpdate=history?history:[transaction];
+      storeItem(historyUpdate);
+      
     setTransactions((prevState) => [transaction, ...prevState])
   }
   return (

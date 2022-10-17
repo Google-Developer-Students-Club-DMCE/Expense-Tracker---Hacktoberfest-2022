@@ -6,6 +6,7 @@ import Transactions from './components/Transactions'
 import { useEffect, useState } from 'react'
 import { Typography, styled, Box } from '@mui/material'
 import { Typewriter } from 'react-simple-typewriter'
+import { getStoredItem } from './localStorage'
 
 const Header = styled(Typography)`
   margin: 10px 0;
@@ -38,6 +39,18 @@ function App() {
   const mapamount = transactions.map((transaction) => transaction.amount)
   const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
   const [mainbalance,setMainbalance]=useState(totalbalance)
+
+const getItemsFromLocalStorage =()=>{
+  let history = JSON.parse(getStoredItem());
+  if(history){
+    setTransactions((prev)=>[...history,...prev]);
+  }
+}
+
+  useEffect(()=>{
+    getItemsFromLocalStorage();
+  },[]);
+  
   useEffect(()=>{
     const mapamount = transactions.map((transaction) => transaction.amount)
     const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
