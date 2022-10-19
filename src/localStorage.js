@@ -4,3 +4,12 @@ export const getStoredItem = () => {
 export const storeItem = (params) => {
   localStorage.setItem("transaction", JSON.stringify(params));
 };
+
+}
+export const storeItem=(params)=>{
+  localStorage.setItem("transaction",JSON.stringify(params));
+}
+export const deleteItem = (id) => {
+  const items = JSON.parse(localStorage.getItem("transaction"));
+  localStorage.setItem("transaction", JSON.stringify(items.filter((item) => item.id !== id)));
+}

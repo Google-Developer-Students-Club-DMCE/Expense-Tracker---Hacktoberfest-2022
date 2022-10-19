@@ -9,6 +9,21 @@ const Transaction = ({ transaction, setTransactions, transactions }) => {
   const color = transaction.amount > 0 ? "green" : "red";
   const handleDelete = (id) => {
     const temp1 = transactions.filter((x) => x.id !== id);
+
+import { ListItem, ListItemText, styled } from '@mui/material'
+import Chip from '@mui/joy/Chip'
+import ChipDelete from '@mui/joy/ChipDelete'
+import { deleteItem } from '../localStorage'
+
+const Detail = styled(ListItem)`
+  margin-top: 15px;
+`
+const Transaction = ({ transaction,setTransactions,transactions }) => {
+  const color = transaction.amount > 0 ? 'green' : 'red'
+  const handleDelete=(id)=>{
+    deleteItem(id);
+    const temp1=transactions.filter((x)=>x.id!==id)
+
     setTransactions(temp1);
   };
   return (
