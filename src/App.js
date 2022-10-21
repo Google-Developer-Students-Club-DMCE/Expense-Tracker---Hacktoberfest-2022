@@ -28,7 +28,7 @@ const Component = styled(Box)`
     padding: 15px;
   }
 `
-
+let header=prompt('Enter new header !')
 function App() {
   const [transactions, setTransactions] = useState([
       { id: 1, text: 'Momos', amount: -9 },
@@ -59,7 +59,7 @@ const getItemsFromLocalStorage =()=>{
   return (
     <Box className="App">
       <Header>
-        <Typewriter words={["Expense Tracker"]} typeSpeed={120} />
+        <Typewriter words={[header]} typeSpeed={120} />
       </Header>
 
       <Component>
