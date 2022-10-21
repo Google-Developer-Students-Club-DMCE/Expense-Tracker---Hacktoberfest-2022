@@ -62,7 +62,7 @@ const getItemsFromLocalStorage =()=>{
         <Typewriter words={[header]} typeSpeed={120} />
       </Header>
 
-      <Component>
+      <Component className='component'>
         <Box>
           <Balance  mainbalance={mainbalance}/>
           <ExpenseCard transactions={transactions} />
