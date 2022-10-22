@@ -1,8 +1,7 @@
 # Expense-Tracker-Hactoberfest-2022
-# Expense-Tracker-Hactoberfest-2022
 
 
-# Table of contents
+## Table of contents
 1. [Introduction ](#kt0)
 2. [Objective of the Project](#kt1)
 3. [Problem formulation](#kt2)
