@@ -2,6 +2,7 @@ import { ListItem, ListItemText, styled } from '@mui/material'
 import Chip from '@mui/joy/Chip'
 import ChipDelete from '@mui/joy/ChipDelete'
 import { deleteItem } from '../localStorage'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Detail = styled(ListItem)`
   margin-top: 15px;
@@ -14,7 +15,7 @@ const Transaction = ({ transaction,setTransactions,transactions }) => {
     setTransactions(temp1);
   }
   return (
-    <>
+    <div className="inner">
       <Detail style={{ background: color, color: 'white' }}>
         <ListItemText>{transaction.text}</ListItemText>
         <ListItemText>{transaction.amount}</ListItemText>
@@ -23,13 +24,13 @@ const Transaction = ({ transaction,setTransactions,transactions }) => {
             size="lg"
             variant="solid"
             color="danger"
-            endDecorator={<ChipDelete />}
+            label="DELETE"
           >
-            Delete
+            <span className='delete' >DELETE</span><DeleteIcon />
           </Chip>
         </button>
       </Detail>
-    </>
+    </div>
   )
 }
 

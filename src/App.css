@@ -25,6 +25,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body{
+  background-color: rgb(226, 246, 246);
+}
 
 .App-link {
   color: #61dafb;
@@ -36,5 +39,36 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width:700px) {
+
+  .component{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .component>div{
+    width: 100% !important;
+    height: 85vh !important;
+  }
+  .component>div button{
+    margin: 10px;
+  }
+  .component>div .inner button{
+    margin: 10px;
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+  .component>div button .delete{
+    display: none;
+  }
+  .component>div button svg{
+    font-size: 40px;
   }
 }

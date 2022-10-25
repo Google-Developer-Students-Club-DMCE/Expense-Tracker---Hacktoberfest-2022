@@ -7,6 +7,9 @@ import { useEffect, useState } from 'react'
 import { Typography, styled, Box } from '@mui/material'
 import { Typewriter } from 'react-simple-typewriter'
 import { getStoredItem } from './localStorage'
+import Button from '@mui/material/Button';
+import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
+
 
 const Header = styled(Typography)`
   margin: 10px 0;
@@ -28,7 +31,7 @@ const Component = styled(Box)`
     padding: 15px;
   }
 `
-
+// let header=prompt('Enter new header !')
 function App() {
   const [transactions, setTransactions] = useState([
       { id: 1, text: 'Momos', amount: -9 },
@@ -39,7 +42,12 @@ function App() {
   const mapamount = transactions.map((transaction) => transaction.amount)
   const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
   const [mainbalance,setMainbalance]=useState(totalbalance)
-
+  const [header,setheader]=useState('EXPENSE TRACKER')
+  const Changeheader=()=>{
+    let newheader=prompt('Enter New header to Add!!!')
+    setheader(newheader)
+    
+  }
 const getItemsFromLocalStorage =()=>{
   let history = JSON.parse(getStoredItem());
   if(history){
@@ -59,10 +67,12 @@ const getItemsFromLocalStorage =()=>{
   return (
     <Box className="App">
       <Header>
-        <Typewriter words={["Expense Tracker"]} typeSpeed={120} />
+        <Typewriter words={[header]} typeSpeed={120} />
+        <Button variant="contained" sx={{margin:'1rem'}} onClick={Changeheader}>Change Header {<ChangeCircleIcon />}</Button>
+
       </Header>
 
-      <Component>
+      <Component className='component'>
         <Box>
           <Balance  mainbalance={mainbalance}/>
           <ExpenseCard transactions={transactions} />
