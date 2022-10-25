@@ -30,17 +30,25 @@ const AlertContainer = styled(Box)`
 const NewTransactions = ({ setTransactions,mainbalance }) => {
   const [text, setText] = useState('')
   const [amount, setAmount] = useState()
-  const [alert,setAlert]=useState(false)
+  const [alert1,setAlert]=useState(false)
 
   const stopAlert=()=>{
     setAlert(false)
   }
   const addExpenseTransaction = () => {
+    if (text===''|| amount==='') {
+      alert('Pls enter required details!!!')
+    }
+    else if(isNaN(amount)){
+      alert('pls enter amount in number!')
+    }
+    else{
     let mainbalancecopy=mainbalance;
     if(mainbalancecopy-amount<0){
       setAlert(true);
       const closeAlert = setTimeout(stopAlert, 3000);
-    }else{
+    }
+    else{
       const transaction = {
         id: Math.floor(Math.random() * 100000),
         text: text,
@@ -57,8 +65,15 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
       storeItem(historyUpdate);
       setTransactions((prevState) => [transaction, ...prevState]);
     }
-  }
+  }}
   const addIncomeTransaction = () => {
+    if (text===''|| amount==='') {
+      alert('Pls enter required details!!!')
+    }
+    else if(isNaN(amount)){
+      alert('pls enter amount in number!')
+    }
+    else{
     const transaction = {
       id: Math.floor(Math.random() * 100000),
       text: text,
@@ -75,10 +90,11 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
       storeItem(historyUpdate);
       
     setTransactions((prevState) => [transaction, ...prevState])
-  }
+  }}
+
   return (
     <Container>
-      {alert ? <AlertContainer><Alert severity='error'>"Not enough Balance."</Alert></AlertContainer> : <></> }
+      {alert1 ? <AlertContainer><Alert severity='error'>"Not enough Balance."</Alert></AlertContainer> : <></> }
       <Typography variant="h4"> New Transaction </Typography>
       <TextField
         variant="filled"
