@@ -1,6 +1,21 @@
 # Expense-Tracker-Hactoberfest-2022
 
+# Hacktoberfest22
+## KickStart to Open Source Event 
 
+## What is Hacktoberfest?
+A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source).
+
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lGJu31oG--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ymlmr15l83rrjq8natft.jpg" width="700">
+
+## Specifically for Hacktoberfest:
+
+  Your PR must be created between October 1 and October 31 (in any time zone, UTC-12 thru UTC+14).
+ 
+  Your PR must be made to a public, unarchived repository.
+  
+  
 ## Table of contents
 1. [Introduction ](#kt0)
 2. [Objective of the Project](#kt1)
@@ -86,13 +101,59 @@ Web application is a type of portal to be used by user to track all its expenses
 
 ## Getting Started
 
-1. Fork& Clone the repository
-2. Open repository in Android studio
-3. Run command 'flutter pub get' at root of the structure
-4. Create a New branch by the Command git checkout -b "branchname"
-5. Code in! and add your code with git add. 
-6. Commit the code with git commit -m  "anytext"
-7. Push the code with git push origin "branchname"
+## How to contribute to this project 
+  
+## How to create an issue?
+
+### New Issue
+
+if you find any new issue or any bug in the code itself then,
+1. Click on  [new issue](https://github.com/Google-Developer-Student-Club-DMCE/Expense-Tracker-hactober2022/issues/new/choose) present on the top right side of the [issue](https://github.com/Google-Developer-Student-Club-DMCE/Expense-Tracker-hactober2022/issues/new/choose) tab of this repository.
+2. Add title and discription of issue that you want to raise and ask the maintainer to assign the issue.
+3. Click on Submit New Issue option.
+Now you have raised a new issue, wait for the maintainer to assign it and you are good to go.
+
+### Existing Issue
+
+if you want to work on an existing issue that has not been assigned then,
+
+ 1. Go in the  [issue](https://github.com/Google-Developer-Student-Club-DMCE/Expense-Tracker-hactober2022/issues) tab of this repository.
+ 2. Choose the issue that you want to work on.
+ 3. Click on that issue and in the comments ask the maintainer to assign you that particular issue.
+ 4. Lastly click on comment and wait for the issue to be assigned by the maintainer.
+ 
+
+## How to create a Pull Request?
+ 
+ 
+ Once the issue is assigned
+  
+  
+* Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
+* Clone your fork down to your local machine
+
+```markdown
+git clone https://github.com/your-username/Expense-Tracker-Hactoberfest-2022.git
+```
+
+* Create a branch
+
+```markdown
+git checkout -b branch-name
+```
+
+* Make your changes (choose from any task below)
+* Commit and push
+
+```markdown
+git add .
+git commit -m 'Commit message'
+git push origin branch-name
+```
+
+* Create a new pull request from your forked repository (Click the `New Pull Request` button located at the top of your repo)
+* Wait for your PR review and merge approval!
+* ⭐ if you had fun!
 
 <div id='kt6'>
 
