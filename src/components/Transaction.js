@@ -19,7 +19,7 @@ const Transaction = ({ transaction,setTransactions,transactions }) => {
       <Detail style={{ background: color, color: 'white' }}>
         <ListItemText>{transaction.text}</ListItemText>
         <ListItemText>{transaction.amount}</ListItemText>
-        <button onClick={()=>{handleDelete(transaction.id)}}>
+        <button className='deletebutton' onClick={()=>{handleDelete(transaction.id)}}>
           <Chip 
             size="lg"
             variant="solid"

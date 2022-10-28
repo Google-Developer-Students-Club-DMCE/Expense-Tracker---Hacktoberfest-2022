@@ -42,10 +42,10 @@ function App() {
   const mapamount = transactions.map((transaction) => transaction.amount)
   const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
   const [mainbalance,setMainbalance]=useState(totalbalance)
-  const [header,setheader]=useState('EXPENSE TRACKER')
+  const [header,setheader]=useState(['EXPENSE TRACKER'])
   const Changeheader=()=>{
     let newheader=prompt('Enter New header to Add!!!')
-    setheader(newheader)
+    setheader([newheader])
     
   }
 const getItemsFromLocalStorage =()=>{
@@ -66,10 +66,22 @@ const getItemsFromLocalStorage =()=>{
   },[transactions])
   return (
     <Box className="App">
-      <Header>
-        <Typewriter words={[header]} typeSpeed={120} />
+      <div className='wrapper'>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      </div>
+      <Header className='header'>
+        <Typewriter words={header} typeSpeed={120} />
         <Button variant="contained" sx={{margin:'1rem'}} onClick={Changeheader}>Change Header {<ChangeCircleIcon />}</Button>
-
       </Header>
 
       <Component className='component'>
