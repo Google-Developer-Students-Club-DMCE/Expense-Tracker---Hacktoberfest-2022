@@ -62,7 +62,7 @@ const getItemsFromLocalStorage =()=>{
   useEffect(()=>{
     const mapamount = transactions.map((transaction) => transaction.amount)
     const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
-    setMainbalance(totalbalance)
+    setMainbalance(totalbalance,toFixed(2))
   },[transactions])
   return (
     <Box className="App">
