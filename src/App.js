@@ -16,6 +16,7 @@ const Header = styled(Typography)`
   font-size: 30px;
   color: black;
   text-transform: uppercase;
+  font-family:"Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
 `
 const Component = styled(Box)`
   display: flex;
@@ -62,7 +63,7 @@ const getItemsFromLocalStorage =()=>{
   useEffect(()=>{
     const mapamount = transactions.map((transaction) => transaction.amount)
     const totalbalance = mapamount.reduce((acc, item) => (acc += item), 0)
-    setMainbalance(totalbalance,toFixed(2))
+    setMainbalance(totalbalance.toFixed(2))
   },[transactions])
   return (
     <Box className="App">
