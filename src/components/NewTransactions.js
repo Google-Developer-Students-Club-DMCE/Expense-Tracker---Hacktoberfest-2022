@@ -55,14 +55,11 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
         amount: -amount,
       }
 
-      let history = JSON.parse(getStoredItem());
+      let history = JSON.parse(getStoredItem()) ?? [];
       
-      if(history&&history.length>0){
-        history.push(transaction);
-      }
+      history.push(transaction);
 
-      let historyUpdate=history?history:[transaction];
-      storeItem(historyUpdate);
+      storeItem(history);
       setTransactions((prevState) => [transaction, ...prevState]);
     }
   }}
@@ -74,23 +71,20 @@ const NewTransactions = ({ setTransactions,mainbalance }) => {
       alert('pls enter amount in number!')
     }
     else{
-    const transaction = {
-      id: Math.floor(Math.random() * 100000),
-      text: text,
-      amount: +amount,
-    }
-
-    let history = JSON.parse(getStoredItem());
-      
-      if(history&&history.length>0){
-        history.push(transaction);
+      const transaction = {
+        id: Math.floor(Math.random() * 100000),
+        text: text,
+        amount: +amount,
       }
 
-      let historyUpdate=history?history:[transaction];
-      storeItem(historyUpdate);
-      
-    setTransactions((prevState) => [transaction, ...prevState])
-  }}
+      let history = JSON.parse(getStoredItem()) ?? [];
+        
+      history.push(transaction);
+
+      storeItem(history);
+        
+      setTransactions((prevState) => [transaction, ...prevState])
+    }}
 
   return (
     <Container>
