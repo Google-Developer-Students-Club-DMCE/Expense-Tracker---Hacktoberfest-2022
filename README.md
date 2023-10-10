@@ -1,6 +1,6 @@
-# Expense-Tracker-Hactoberfest-2022
+# Expense-Tracker-Hactoberfest-2023
 
-# Hacktoberfest22
+# Hacktoberfest23
 ## KickStart to Open Source Event 
 
 ## What is Hacktoberfest?
