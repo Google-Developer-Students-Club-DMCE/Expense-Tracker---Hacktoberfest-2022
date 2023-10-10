@@ -7,7 +7,7 @@
 A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source).
 
 
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lGJu31oG--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ymlmr15l83rrjq8natft.jpg" width="700">
+<img src="[https://res.cloudinary.com/practicaldev/image/fetch/s--lGJu31oG--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ymlmr15l83rrjq8natft.jpg](https://github.com/Google-Developer-Students-Club-DMCE/Expense-Tracker-Hacktoberfest-2022/assets/98736611/5fead74f-91e6-4480-b2e7-7dabfcbbaca1)" width="700">
 
 ## Specifically for Hacktoberfest:
 
