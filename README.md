@@ -5,8 +5,6 @@
 ## What is Hacktoberfest?
 A month-long celebration from October 1st - 31st to get people involved in [Open Source](https://github.com/open-source).
 
-![WhatsApp Image 2023-10-10 at 8 43 15 PM](https://github.com/Google-Developer-Students-Club-DMCE/Expense-Tracker-Hacktoberfest-2022/assets/98736611/68b9d0b3-846e-4e6a-afc1-e1d98ab9b00e)
-
 
 
 ## Specifically for Hacktoberfest:
@@ -15,98 +13,4 @@ A month-long celebration from October 1st - 31st to get people involved in [Open
  
   Your PR must be made to a public, unarchived repository.
   
-  
-# Contribution Rules📚:
 
-- You are allowed to make pull requests that break the rules. We just merge it ;)
-- Do NOT add any build steps e.g npm install (we want to keep this a simple static site)
-- Do NOT remove other content.
-- Styling/code can be pretty, ugly or stupid, big or small as long as it works
-<!-- - Add your name to the contributorsList file. -->
-- Try to keep pull requests small to minimize merge conflicts
-
-
-## Getting Started 🤩🤗:
-
-- Fork this repo (button on top)
-- Clone on your local machine
-
-terminal
-git clone https://github.com/fineanmol/Hacktoberfest2023.git
-
-- Navigate to project directory.
-terminal
-cd Hacktoberfest2023
-
-
-- Create a new Branch
-
-markdown
-git checkout -b my-new-branch
-
-
-<!--- - Add your Name to `contributors/contributorsList.js`. -->
-
-markdown
-git add .
-
-- Commit your changes.
-
-markdown
-git commit -m "Relevant message"
-
-- Then push 
-markdown
-git push origin my-new-branch
-
-
-
-- Create a new pull request from your forked repository
-
-<br>
-
-## Avoid Conflicts {Syncing your fork}
-
-An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PR's may be merged while you're working on your branch/fork.   
-
-terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2023
-
-
-You can verify that the new remote has been added by typing
-terminal
-git remote -v
-
-
-To pull any new changes from your parent repo simply run
-terminal
-git merge upstream/master
-
-
-This will give you any eventual conflicts and allow you to easily solve them in your repo. It's a good idea to use it frequently in between your own commits to make sure that your repo is up to date with its parent.
-
-For more information on syncing forks [read this article from Github](https://help.github.com/articles/syncing-a-fork/).
-
-# FAQs (Frequently Asked Questions)
-
-- Who all can contribute?
-  - Anyone with a github account and who is signed up for
-[hacktoberfest](https://hacktoberfest.digitalocean.com/) :)
-- Are you getting paid for this?
-  - Sadly no. But we think we should. This is 100% unofficial and we do it for fun, fame and glory.
-- Who are you and why are you doing this?
-  - We are two programmers from India [Anmol](https://www.linkedin.com/in/fineanmol/)
-  and [Ritesh](https://github.com/ritesh2905). We are doing this because we love Open Source and Hacktoberfest. We want to make it easier for people to get started with Hacktoberfest and Open Source.
-- Why are you not using digitalocean?
-  - Because we only know JavaScript and suck at servers. We use [now](https://zeit.co/now) instead.
-
-- Should I come closer to the text saying 'Don't come closer' on the left side of the home tab ?
-  - Nope.
-- How many pull request (PR) must be made, if I want to get an awesome tshirt from Hacktoberfest 2023?
-  - 4
-- How do I track my progress to get an awesome shirt from Hacktoberfest 2023?
-  - [go to :](https://hacktoberfest.digitalocean.com/profile/). (Check Out Your Own Stats at Right Top)
-- What is the duration of Hacktoberfest 2023?
-  - It is from 1st october to 31st october 2023...
-- What is the event for?
-  - For the open source community engagement and learn how to contribute to open source.
